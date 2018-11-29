@@ -1,0 +1,23 @@
+<ul>
+    <li><label>Id:</label>{{ vendor.Id }}</li>
+    <li>Code: {{ vendor.Code }}</li>
+    <li>Name: {{ vendor.Name }}</li>
+    <li>Address: {{ vendor.Address }}</li>
+    <li>City: {{ vendor.City }}</li>
+    <li>State: {{ vendor.State }}</li>
+    <li>Zip: {{ vendor.Zip }}</li>
+    <li>Phone: {{ vendor.Phone }}</li>
+    <li>Email: {{ vendor.Email }}</li>
+    <li>Prepproved: {{ vendor.IsPreApproved | bool }}</li>
+    <li>Active: {{ vendor.Active | bool }}</li>
+    </ul>
+    <div class="editlink">
+        <a routerLink='/vendors/edit/{{vendor.Id}}'>Edit</a>
+    </div>
+    <div>
+            <button *ngIf='!confirmDelete' class="btn btn-primary" (click)="confirm()">Delete</button>
+    </div>
+    <div>
+            <button *ngIf="confirmDelete" class="btn btn-primary" (click)="delete()">Are You Sure You Want to Delete?</button>
+    </div>
+    

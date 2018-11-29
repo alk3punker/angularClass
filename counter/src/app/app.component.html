@@ -1,0 +1,16 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }} apps are so much fun!
+  </h1> 
+  <h3>
+    SystemService.about is {{ sys.about }}
+  </h3>
+</div>
+<div style="text-align: center" class="counter">
+  <button (click)="decrement()" class="button1" >Minus</button>
+  <input [(ngModel)]="counter" [ngClass]="classes" readonly="true" style="border:0px;padding:10px;width:15px">
+  <button (click)="increment()" class="button1">Plus</button>
+</div>
+<about-component></about-component>
+

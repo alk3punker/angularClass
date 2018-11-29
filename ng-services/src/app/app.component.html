@@ -1,0 +1,24 @@
+<div class='component'>
+  <div>
+    <label>Search: <input [(ngModel)]="searchCriteria" type="text"></label>
+  </div>
+  <table class='table table-sm'>
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Role</td>
+        <td>GCWW employee</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let atn of json | search: searchCriteria | sort: sortCol'>
+        <td>{{ atn.id }}</td>
+        <td>{{ atn.name }}</td>
+        <td>{{ atn.role }}</td>
+        <td>{{ atn.gcwwe | bool }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
